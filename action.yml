@@ -5,9 +5,9 @@ inputs:
   version:
     description: 'Bazel version to install e.g. 1.2.1, 2.0.0, ...'
     required: false
-    default: '4.0.0'
+    default: '7.0.0'
 runs:
-  using: 'node12'
+  using: 'node21'
   main: 'index.js'
 branding:
     icon: 'box'
