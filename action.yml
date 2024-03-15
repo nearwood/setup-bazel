@@ -7,7 +7,7 @@ inputs:
     required: false
     default: '7.0.0'
 runs:
-  using: 'node21'
+  using: 'node20'
   main: 'index.js'
 branding:
     icon: 'box'
