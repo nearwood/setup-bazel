@@ -15,9 +15,10 @@ jobs:
         - uses: actions/checkout@v4
         - name: Setup Bazel
           uses: ./
+        - if: matrix.os == 'windows'
+          run: dir
         - name: Verify Bazel Installation (Windows Only)
           if: matrix.os == 'windows'
-          run: dir
           run: ./bazel.exe -h
         - name: Verify Bazel Installation
           if: matrix.os != 'windows'
