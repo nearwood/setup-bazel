@@ -12,11 +12,12 @@ jobs:
         max-parallel: 4
         fail-fast: false
       steps:
-        - uses: actions/checkout@v3
+        - uses: actions/checkout@v4
         - name: Setup Bazel
           uses: ./
         - name: Verify Bazel Installation (Windows Only)
           if: matrix.os == 'windows'
+          run: dir
           run: ./bazel.exe -h
         - name: Verify Bazel Installation
           if: matrix.os != 'windows'
